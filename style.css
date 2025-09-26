@@ -88,19 +88,40 @@ select {
   color: #39ff14;
   border: 2px solid #39ff14;
   border-radius: 6px;
-  padding: 0.5em 1.5em 0.5em 1em;
+  padding: 0.5em 2.5em 0.5em 1em; /* Extra right padding for arrow */
   font-size: 1.1em;
   font-family: 'VT323', 'Segoe UI', Arial, sans-serif;
   box-shadow: 0 0 18px #39ff14, 0 0 6px #000 inset;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   text-shadow: 0 0 8px #39ff14, 0 0 20px #111;
+  position: relative;
+  z-index: 1;
 }
 
 select:focus {
   border-color: #fff;
   box-shadow: 0 0 28px #39ff14, 0 0 10px #fff inset;
+}
+
+/* Neon animated glow */
+@keyframes neonSelectGlow {
+  0%, 100% { box-shadow: 0 0 18px #39ff14, 0 0 6px #000 inset; }
+  50% { box-shadow: 0 0 32px #39ff14, 0 0 16px #39ff1466 inset; }
+}
+select {
+  animation: neonSelectGlow 2s infinite alternate;
+}
+
+/* Custom arrow for dropdown */
+select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='lime' viewBox='0 0 140 140' height='18' width='18' xmlns='http://www.w3.org/2000/svg'><polygon points='70,110 110,50 30,50'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1em center;
+  background-size: 1.2em;
 }
 
 option {

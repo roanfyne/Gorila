@@ -129,3 +129,34 @@ option {
   color: #39ff14;
   text-shadow: 0 0 6px #39ff14;
 }
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 2em auto;
+  max-width: 700px;
+  padding: 2em 1em;
+  background: rgba(16, 16, 16, 0.90);
+  border: 2px solid #39ff14;
+  border-radius: 16px;
+  box-shadow: 0 0 28px #39ff14, 0 0 8px #000 inset;
+}
+
+.centered-content p, .centered-content h2 {
+  text-shadow: 0 0 8px #39ff14, 0 0 20px #111;
+  font-family: 'VT323', 'Segoe UI', Arial, sans-serif;
+  color: #39ff14;
+}
+
+.centered-content h2 {
+  font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 16px #39ff14, 0 0 32px #39ff14, 0 0 8px #fff;
+}
